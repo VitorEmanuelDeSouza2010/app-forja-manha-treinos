@@ -6,6 +6,10 @@
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -18,6 +22,16 @@ nav {
     justify-content: space-between;
     box-shadow: 0px 3px 20px rgba(0, 0, 0, 0475);
     z-index: 999;
+    animation: fromTop 2s ease-in-out;
+}
+
+@keyframes fromTop {
+    0%{
+        transform: translateY(-70px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
 .wrap-img {
@@ -65,15 +79,39 @@ nav {
 }
 
 .left {
-    width: 50%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fromLeft 2.5s ease-in-out;
 }
+
+@keyframes fromLeft {
+    0%{
+        transform: translateX(-100px) rotate(-50deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+} 
 
 .right {
     width: 400px;
+    animation: fromRight 2.5s ease-in-out;
 }
+
+@keyframes fromRight {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+} 
 
 .wrap-banner {
     border-radius: 999px;
@@ -107,13 +145,61 @@ nav {
 #s2 {
     background-color: lightgray;
     min-height: 100vh;
-    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vh;
+}
+
+.wrap-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 230px;
+    padding: 20px;
+    border: 2px solid #090909;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: all 200px linear;
+    border-radius: 16px;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+    box-shadow: 0px 3px 20px #09090976;
 }
 
 #s3 {
-    background-color: lightgray;
+    background-color: black;
     min-height: 100vh;
     padding-top: 90px;
+}
+
+#s3 iframe{
+    width: 1068px;
+    height: 640px;
+}
+
+.wrap-video{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #s4 {
@@ -133,18 +219,13 @@ nav {
         text-align: center;
     }
 
-    #s1,
-    #s2,
-    #s3,
-    #s4 {
-        padding-top: 120px;
-        min-height: 50vh;
-        padding-bottom: 15px;
-    }
+
 
     #s1 {
         flex-direction: column;
         padding-top: 130px;
+        min-height: 50vh;
+        height: auto;
     }
 
     .left {
@@ -168,5 +249,14 @@ nav {
 
     .right p {
         padding: 50px;
+    }
+    #s3 {
+        min-height: 50vh;
+        height: auto;
+        width: 100%;
+    }
+
+    #s3 iframe{
+        width: 100%;
     }
 }
