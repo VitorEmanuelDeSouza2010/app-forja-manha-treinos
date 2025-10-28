@@ -71,7 +71,7 @@ nav {
 }
 
 #s1 {
-    background-color: lightgray;
+    background-color: gray;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -143,7 +143,7 @@ nav {
 }
 
 #s2 {
-    background-color: lightgray;
+    background-color: gray;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -169,6 +169,8 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: #ffffff;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(110, 110, 110, 1) 100%);
 }
 
 .card img {
@@ -203,9 +205,21 @@ nav {
 }
 
 #s4 {
-    background-color: lightgray;
+    background-color: gray;
     min-height: 100vh;
     padding-top: 90px;
+}
+
+.wrap-img2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageT {
+    width: 1400px;
+    height: auto;
 }
 
 @media (width <=768px) {
@@ -256,7 +270,7 @@ nav {
         width: 100%;
     }
 
-    #s3 iframe{
+    #s3 iframe {
         width: 100%;
     }
 }
