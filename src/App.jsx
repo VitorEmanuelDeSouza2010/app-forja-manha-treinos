@@ -1,0 +1,48 @@
+import styles from './App.module.css'
+import perfil from '../public/FotoG.webp'
+
+function App() {
+
+  //javascript
+
+  return (
+    <>
+      <nav className={styles.menu}>
+        <a href="#s1">Home</a>
+        <a href="#s2">Cards</a>
+        <a href="#s3">Video</a>
+        <a href="#s4">Contato</a>
+      </nav>
+      <main>
+
+        <section className={styles.s1} id='s1'>
+          <div className={styles.left}>
+            <img className={styles.imgPerfil} src={perfil} alt="Foto perfil" />
+          </div>
+          <div className={styles.right}>
+            <h2 className={styles.title}>Vitor Emanuel</h2>
+            <p className={styles.paragraph}{
+              constructor(parameters) {
+                
+              }
+            }>Aluno do colegio Nirlei Medeiros, aluno do SENAI, tenho dificuldades para controlar minhas emoções, mas sempre tento me manter calmo e neutro em situações complicadas mesmo que nem sempre eu consiga, tenho interesse em programação de sites e jogos, desenvolvimentos de sistemas e desenhos, tenho altismo leve</p>
+          </div>
+        </section>
+
+        <section id='s2'>
+          <h2>sessao 2</h2>
+        </section>
+
+        <section id='s3'>
+          <h2>sessao 3</h2>
+        </section>
+
+        <section id='s4'>
+          <h2>sessao 4</h2>
+        </section>  
+      </main>
+    </>
+  )
+}
+
+export default App
