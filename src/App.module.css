@@ -71,3 +71,22 @@
         margin-top: -150px
     }
 }
+
+.rodape{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #011422;
+    border-top: 2px solid #0e4e7c;
+}
+
+.rodape a{
+    transition: all 500ms ease-in-out;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.rodape a:hover{
+    transform: translateY(-5px) scale(1.3);
+}
